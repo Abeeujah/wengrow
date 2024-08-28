@@ -51,3 +51,37 @@ fn list_median(list: &[i32]) -> i32 {
         false => list[mid_point],
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_prime() {
+        assert!(is_prime(17));
+        assert!(!is_prime(14));
+    }
+
+    #[test]
+    fn test_is_leap_year() {
+        assert!(is_leap_year(2024));
+        assert!(!is_leap_year(2100));
+    }
+
+    #[test]
+    fn test_sum_list() {
+        assert_eq!(sum_list(vec![1, 2, 3, 4]), 10);
+        assert_ne!(sum_list(vec![1, 2, 3, 4]), 100);
+    }
+
+    #[test]
+    fn test_chess_board_spaces() {
+        assert_eq!(chess_board_spaces(8), 4);
+    }
+
+    #[test]
+    fn test_list_median() {
+        assert_eq!(list_median(&[1, 2, 3, 4]), 2);
+        assert_eq!(list_median(&[1, 2, 3, 4, 4]), 3);
+    }
+}

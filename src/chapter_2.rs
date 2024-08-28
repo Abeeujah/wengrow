@@ -38,7 +38,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use crate::chapter_2::linear_search;
+    use crate::chapter_2::{binary_search, linear_search};
 
     #[test]
     fn test_linear_search() {
@@ -48,7 +48,7 @@ mod tests {
 
     #[test]
     fn test_binary_search() {
-        assert_ne!(linear_search(&[2, 4, 6, 8, 10, 12, 13], 12), None);
-        assert_eq!(linear_search(&[2, 4, 6, 8, 10, 12, 13], 40), None);
+        assert_ne!(binary_search(&[2, 4, 6, 8, 10, 12, 13], 12), None);
+        assert_eq!(binary_search(&[2, 4, 6, 8, 10, 12, 13], 40), None);
     }
 }
