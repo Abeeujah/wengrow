@@ -168,6 +168,11 @@ mod tests {
     }
 
     #[test]
+    fn test_is_palindrome() {
+        assert!(is_palindrome("lawal"));
+    }
+
+    #[test]
     fn test_prods() {
         assert_eq!(
             vec![2, 3, 4, 5, 6, 8, 10, 12, 15, 20],
