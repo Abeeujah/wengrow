@@ -79,6 +79,7 @@ where
         .collect()
 }
 
+// Write a function that returns the first duplicate character in a list of characters
 fn ret_first_duplicate(word: &[char]) -> Option<char> {
     let mut set = HashSet::new();
     for c in word {
@@ -90,6 +91,8 @@ fn ret_first_duplicate(word: &[char]) -> Option<char> {
     None
 }
 
+// Write a function that returns the missing letter
+// from a word that contains all the alphabets
 fn missing_letter(word: &str) -> Option<char> {
     let letters = 'a'..='z';
     let set = word.chars().collect::<HashSet<char>>();
@@ -101,6 +104,7 @@ fn missing_letter(word: &str) -> Option<char> {
     None
 }
 
+// Write a function that returns the first character without a duplicate in a word
 fn first_non_duplicate(word: &str) -> Option<char> {
     let mut map: HashMap<char, i32> = HashMap::new();
     let chars: Vec<char> = word.chars().collect();

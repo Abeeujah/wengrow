@@ -1,6 +1,4 @@
 // Lint a line of code, ensuring every opening brace has a closing brace.
-use std::collections::HashMap;
-
 fn is_opening_brace(brace: char) -> bool {
     ['[', '{', '('].contains(&brace)
 }
@@ -45,8 +43,8 @@ fn rev_str(word: &str) -> String {
         store.push(c);
     }
     let mut word = String::new();
-    for c in store {
-        word.push(c);
+    for _ in 0..store.len() {
+        word.push(store.pop().expect("Cannot be null"));
     }
     word
 }

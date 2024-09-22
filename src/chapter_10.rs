@@ -1,4 +1,4 @@
-use std::{fs, path::PathBuf};
+use std::fs;
 
 // write a countdown from 10
 fn countdown(n: u8) {
